@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Remember phone!</string>
+    <string name="start">Head On In!</string>
+    <string name="name">Name: </string>
+    <string name="number">Number: </string>
+    <string name="title"><u>REMEMBER PHONE</u></string>
+    <string name="enter">insert</string>
+    <string name="dlt">Delete</string>
+</resources>
