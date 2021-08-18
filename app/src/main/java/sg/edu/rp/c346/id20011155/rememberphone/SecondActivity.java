@@ -73,16 +73,15 @@ public class SecondActivity extends AppCompatActivity {
 
                         DBHelper dbh = new DBHelper(SecondActivity.this);
 
-//                        int pos = 0;
-//                        for (int i = 0; i < phoneList.size(); i++) {
-//                            if (phoneList.get(i).getName().equalsIgnoreCase(currentPhone.getName())) {
-//                                pos = i;
-//                                break;
-//                            }
-//                        }
                         dbh.updatePhone(name, number, currentPhone);
-//                        Phone updatedPhone = new Phone(currentPhone.getId(), name, number);
-//                        phoneList.set(pos, updatedPhone);
+                        for (int i = 0; i < phoneList.size(); i++) {
+                            if (phoneList.get(i).getName().equalsIgnoreCase(currentPhone.getName())) {
+                                Phone updatedPhone = phoneList.get(i);
+                                updatedPhone.setName(name);
+                                updatedPhone.setNumbers(number);
+                                break;
+                            }
+                        }
                         adapter.notifyDataSetChanged();
                         dbh.close();
                         Toast.makeText(SecondActivity.this, "Number Edited", Toast.LENGTH_LONG).show();

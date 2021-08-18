@@ -56,8 +56,8 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, name);
         values.put(COLUMN_NUMBER, number);
-        String condition = COLUMN_ID + "= ?";
-        String[] args = {String.valueOf(data.getId())};
+        String condition = COLUMN_NAME + "= ?";
+        String[] args = {data.getName()};
         int result = db.update(TABLE_PHONE, values, condition, args);
         db.close();
         return result;
